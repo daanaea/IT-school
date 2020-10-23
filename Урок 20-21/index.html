@@ -1,0 +1,264 @@
+<!--внимательно изучите комментарии-->
+<!--создайте библиотеку классов style-->
+
+<!--Задание 1. Открой папку 1 и  картинку template.png
+				1.1 добавь класс для дива на всю ширину, назови класс menu. Задай высоту и свойство border-bottom, чтобы появилось только нижнее подчёркивание со цветом lightgrey. 
+
+				1.2 посмотрите на картинку 1_1.png, поставь два дива рядом. Для чего они? Для дива логотипа класс - logo-block (width:250px), для дива ссылок класс - links-block. 
+
+				Какое свойство надо дополнительно добавить в класс menu, чтобы дивы встали рядом? 
+
+				1.4.Поставь элементы логотип компании, иконку point и ссылку 	
+				
+				1.5 Добавь класс logo-img для логотипа, класс link-img для иконки point  и класс link для ссылки, стилизуй как на картинке template.png.
+
+				Чтобы link-img и link стояли на среднем уровне добавь свойство для link-img: vertical-align:middle.
+				
+				1.6 Для logo-block добавь: border-right, чтобы появилась граница только справа. И отцентруй картинку (text-align:center), и внутренний верхний отступ.			
+-->
+
+
+<style>
+    .menu {
+      border-bottom: 1px solid lightgrey;
+      height: 44px;
+      display: flex;
+    }
+    .logo-block {
+      width: 180px;
+      border-right: 1px solid lightgrey;
+      text-align: center;
+      padding-top: 1px;
+    }
+    .links-block {
+      display: flex;
+    }
+    .link {
+      margin-top: 2px;
+      text-decoration: none;
+      color: black;
+      font-family: Arial;
+      font-size: 13px;
+      padding-top: 10px;
+      margin-left: 3px;
+    }
+    .logo-img {
+      height: 36px;
+    }
+    .link-img {
+      height: 23px;
+      vertical-align: middle;
+      padding-top: 7px;
+      margin-left: 25px;
+    }
+    .cafe-block {
+      width: 320px;
+      height: 330px;
+      border-style: solid;
+      border-width: 0px ;
+      border-radius: 12px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-right: 20px;
+      margin-left: 20px;
+      font-family: arial;
+    }
+</style>
+
+
+
+<!--Меню-->
+<div class="menu">
+	<div class="logo-block">
+		<img src="logo.png" class="logo-img">
+	</div>
+	<div class="links-block">
+		<img src="point.png" class="link-img">
+		<a href="" class="link">Адрес доставки</a>		
+	</div>	
+</div>
+
+
+<!--Задание 2. Открой папку 2 и картинку template.png. 
+				2.1 Посмотри на картинку 1.png, добавь ему класс main-banner и свойства.
+				Картинка стоит фоном у него. 
+
+				2.2. Посмотрите на картинку 2.png, добавье класс для дива title-block, ширина блока 500px. 
+
+				2.3 Для заголовка добавь класс title и нужные свойства. Вспомни, как поставить по центру текст. Размер текста 50px;		
+
+				2.5. Чтобы блок title-block стоял с отступом от дива-родителя. Добавь диву-родителю (main-banner) внутренний верхний отступ padding-top. 
+
+				2.6. Для title-block убери высоту, чтобы она подстраивалась под содержимое и добавь внутренние отступы снизу и сверху по 5px;
+
+				Эти классы обязательно используйте повторно внизу. 
+-->
+<!--ГЛАВНЫЙ БАННЕР-->
+<style>
+  .main-banner {
+    height: 400px;
+    background-image: url(images.png);
+    background-size: 100% 100%;
+    padding-top: 140px;
+    margin-top: 20px;
+  }
+  .title-block {
+    width: 390px;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 130px;
+  }
+  .title {
+    font-family: Arial;
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+  }
+</style>
+
+<div class="main-banner">
+	<div class="title-block">
+		<h1 class="title">Редкие животные на рюкзаках Delivery Club</h1>	
+	</div>
+</div>
+
+<!--Задание 3. Папка 3 и template.png. Блок с любимыми доставками из твоего города. 
+				3.1 Посмотри на картинку 1.png. Надо поставить див-родитель серого цвета (#F6F6F6). Назови класс cafe-block. Не ставь высоту, пусть див подстроится под содержимое. Лучше добавь внутренние нижние и верхние отступы по 50px.
+
+				3.2 Картинка 2.png, надо поставить див по центру.  Назовите класс center-cafe, ширина на большом экране будет 1600px. Можешь подстроить ширину под свой монитор. И добавь display:flex, чтобы дивы внутри него встали в строку.
+
+				3.3 Картинка 3.png, теперь надо поставить 4 одинаковых дива. Создайте класс cafe-item и добавь каждому диву.
+				
+				3.4. Скачайте картинки любимых кафе города и поставьте их. А также, название и примерное время доставки. 
+
+				3.5 Добавь классы для картинок cafe-img, для текста text, для времени cafe-timer. Стилизуй их смотря на template.png
+-->
+<!--Кафе-->
+
+
+<style>
+  .img-cppst {
+    border-style:solid;
+    border-width: 0px ;
+    border-radius: 12px;
+    width: 320px;
+    text-align: center;
+  }
+</style>
+
+<style>
+  .mini-div {
+    width: 100px;
+    height: 10px;
+    color: green;
+    background-color: #F6F6F6;
+    margin-left: 23px;
+    padding-bottom: 20px;
+    font-size: 19px;
+    font-family: arial;
+    border-style:solid;
+    border-width: 0px ;
+    border-radius: 12px;
+    text-align: center;
+    
+  }
+
+</style>
+
+
+
+<div style="background-color: #F6F6F6;height: 440px; ">
+	<div style="display: flex;">
+		<div style="margin-left: auto; margin-right: auto;display : flex; margin-top: 60px">
+      <div class="cafe-block" style="background-color: white">
+        <img src="https://i.imgur.com/xYVrge0.png" class="img-cppst" alt="" >
+        <h3 style="margin-left: 10px">Китагава </h3>
+        <div class="mini-div">20-30 мин</div>
+      </div>
+      <div class="cafe-block" style="background-color: white">
+        <img src="https://i.imgur.com/aOX6Gl3.png" class="img-cppst" alt="" >
+        <h3 style="margin-left: 10px">Kimchi </h3>
+        <div class="mini-div" >25-35 мин</div>
+      </div>
+      <div class="cafe-block" style="background-color: white">
+        <img src="https://i.imgur.com/XW2kbl0.png" class="img-cppst" alt="" >
+        
+       <h3 style="margin-left: 10px">Masamune </h3>
+        <div class="mini-div">35-45 мин</div>
+      </div>
+      <div class="cafe-block" style="background-color: white">
+        <img src="https://i.imgur.com/712PPXv.png" class="img-cppst" alt="" >
+        <h3 style="margin-left: 10px">Black Star Burger </h3>
+        <div class="mini-div">45-60 мин</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--Задание 4. Папка 4 и template.png
+				4.1 Здесь все просто, добавьте диву с фоном класс middle-banner. 
+				4.2 Свойства дива для заголовка такие же, как и у дива в main-banner. Надо  ли тогда, создавать новый класс?
+				4.3. Свойства заголовка h1, тоже такие, как в main-banner. Надо ли тогда задавать новые классы?
+-->
+<!--СРЕДНИЙ БАННЕР-->
+
+<style>
+    .fon_niz{
+      background-image: url('banner.png');
+      background-size: 100% 130%;
+      height: 220px;
+      padding-top: 80px;
+    }
+    .txt1{
+      color: black;
+      font-family:Arial;
+      text-align: center;
+      font-size: 33px;
+      
+      
+    }
+
+</style>
+
+<div class="fon_niz">
+	<div class="title-block">
+		<h1 class="title" style="height: 90px">Спасём природу вместе!</h1>
+	</div>	
+</div>
+
+
+<!--Задание 5. Полностью похож на Задание 3. Только вставьте такие доставки, которых нет в твоём городе и ты бы хотел их видеть. Например ,mcdonalds или dunkin donuts.
+
+	Выполните по аналогии, используя классы из задания 3.-->
+<!--ТОВАРЫ-->
+
+<div style="background-color: #F6F6F6;height: 440px; ">
+	<div style="display: flex;">
+		<div style="margin-left: auto; margin-right: auto;display : flex; margin-top: 60px">
+      <div class="cafe-block" style="background-color: white">
+        <img src="https://avatars.mds.yandex.net/get-zen_doc/1668009/pub_5e7ddc36151be77cd3207c4a_5e7f2ee7862a504fb17abf17/scale_2400" class="img-cppst" alt="" style="height: 200px;">
+        <h3 style="margin-left: 10px">Ichiraku Ramen</h3>
+        <div class="mini-div">20-30 мин</div>
+      </div>
+      <div class="cafe-block" style="background-color: white">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/70/ad/a1/mesas-en-el-comedor-con.jpg" class="img-cppst" alt="" style="height: 200px;">
+        <h3 style="margin-left: 10px">El Celler de Can Roca</h3>
+        <div class="mini-div" >25-35 мин</div>
+      </div>
+      <div class="cafe-block" style="background-color: white">
+        <img src="https://assets.teenvogue.com/photos/573a0deba57ac7fa6b49dc9d/16:9/w_1280,c_limit/Mini_Frappuccino_2016.JPG" class="img-cppst" alt="" style="height: 200px;">
+        
+       <h3 style="margin-left: 10px">Starbucks</h3>
+        <div class="mini-div">35-45 мин</div>
+      </div>
+      <div class="cafe-block" style="background-color: white">
+        <img src="https://storage.myseldon.com/news_pict_F1/F1253E7886FE7DFB3713301733131414" class="img-cppst" alt="" style="height: 200px;">
+        <h3 style="margin-left: 10px">McDonald’s</h3>
+        <div class="mini-div">45-60 мин</div>
+			</div>
+		</div>
+	</div>
+</div>
