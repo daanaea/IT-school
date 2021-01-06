@@ -1,0 +1,310 @@
+<!-- a. СМОТРИ template.png
+b. Классы НАЗЫВАЕМ по смыслу.
+
+ЗАДАНИЕ 1. Создай класс links для ссылок в шапке.
+	а. Создай класс links.
+	b. Вырежи свойства из атрибута style и добавь их классу links.
+	c. Добавь атрибут class со значением "links" ссылкам.
+
+ЗАДАНИЕ 2. Создай класс goods-items для 4-х дивов с товарами.
+	а. Создай класс goods-items.
+	b. Вырежи свойства из атрибута style и добавь их классу goods-items.
+	c. Добавь атрибут class со значением "goods-items" дивам.
+
+ЗАДАНИЕ 3. Создай класс text_red для всего красного текста в коде.
+	а. Создай класс text_red.
+	b. Вырежи свойства из атрибута style и добавь их классу text_red.
+	c. Добавь атрибут class со значением "text_red" тегам p.
+
+ЗАДАНИЕ 4. Создай класс text для всего черного текста в коде.
+	а. Создай класс text.
+	b. Вырежи свойства из атрибута style и добавь их классу text.
+	c. Добавь атрибут class со значением "text" тегам p.
+
+
+ЗАДАНИЕ 5. Создай класс button для всех кнопок в коде.
+	а. Создай класс button.
+	b. Вырежи свойства из атрибута style и добавь их классу button.
+	c. Добавь атрибут class со значением "button" тегам кнопки.
+
+ЗАДАНИЕ 6. Создай класс reviews-block для 3-х дивов с отзывами клиентов.
+	а. Создай класс reviews-block.
+	b. Вырежи свойства из атрибута style и добавь их классу reviews-block.
+	c. Добавь атрибут class со значением "reviews-block" дивам. -->
+
+<style>
+	/* КЛАССЫ ПЕРВОГО УРОВНЯ */
+	.header_links {
+		margin-left: 40px; 
+		font-family: arial; 
+		color: red; 
+		font-size: 16px;
+	}
+	/* навигация */
+	.navigation {
+		height: 60px;
+		background: black;
+	}
+	/* баннер */
+	.banner {
+		height: 550px;
+		background-image: url(bg.png);
+		background-size: 100% 100%;
+		padding-top: 250px;
+	}
+	/* товары */
+	.goods {
+		height: 550px;
+		background-color: grey;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	/* отзывы */
+	.reviews {
+		height: 350px;
+		background-color: lightgrey;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+
+	/* КЛАССЫ ВТОРОГО УРОВНЯ */
+
+	/* автоматические отступы для текста в баннере */
+	.navigation-align {
+		height: 60px;
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+	}
+	.banner-align {
+		height: 300px;
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	/* выровнять блок по центру */
+	.goods-align {
+		height: 550px;
+		width: 900px;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;	
+	}
+	.reviews-align {
+		height: 550px;
+		width: 900px;
+		margin-right: auto;
+		margin-left: auto;
+		display: flex;	
+	}
+
+
+	/* КЛАССЫ ТРЕТЬЕГО УРОВНЯ */
+
+	/* див для лого */
+	.block-logo {
+		height: 60px; 
+		width: 100px;
+	}
+	/* блок ссылок */
+	.block-links {
+		height: 30px;
+		width: 900px;
+		margin-left: 100px;
+		margin-top: 20px;
+	}
+
+
+	/* НАПОЛНЕНИЕ ДИВОВ */
+
+	/* размер лого */
+	.img-logo {
+		height: 60px;
+	}
+	
+	/* Заголовок в баннере */
+	.banner-header {
+		font-family: Arial;
+		color: white;
+		font-size: 60px;
+	}
+	/* дивы товаров (2 задание) */
+	.goods-items {
+		height: 550px; 
+		width: 210px; 
+		margin-left: 30px;
+	}
+	/* картинки товаров */
+	.img-items {
+		width: 210px;
+	}
+	/* картинки отзывов */
+	.img-reviews {
+		width: 290px;
+	}
+	/* черный текст (4 задание)*/
+	.text {
+		font-family: Arial; 
+		text-align: center; 
+		color: black;
+	}
+	/* красный текст (3 задание) */
+	.text-red {
+		font-family: Arial; 
+		font-weight: bold; 
+		color: purple; 
+		text-align: center
+	}
+	/* кнопки (5 задание) */
+	.button {
+		height: 50px; 
+		width: 150px; 
+		background-color: purple; 
+		color: black; 
+		border-radius: 8px;	
+		font-family: Arial;
+		border-color: lightgrey;
+	}
+
+	.reviews-block {
+		height: 350px; 
+		width: 300px;
+	}
+	/* КЛАССЫ СОЗДАЕМ ЗДЕСЬ */
+</style>
+
+<!-- ШАПКА -->
+<!-- 1 уровень -->
+<div class="navigation">
+	<!-- 2 уровень -->
+	<div class="navigation-align">
+		<!-- 3 уровень -->
+		<div class="block-logo">
+			<!-- здесь лого -->
+			<img src="logo.png" class="img-logo">
+		</div>
+		<div class="block-links">
+			<!-- ссылки -->
+			<a href="" class="header_links">Главная</a>
+			<a href="" class="header_links">Отзывы</a>
+			<a href="" class="header_links">Товары</a>
+			<a href="" class="header_links">Доставка</a>
+			<a href="" class="header_links">Адреса магазинов</a>
+			<a href="" class="header_links">О нас</a>
+		</div>
+	</div>
+</div>
+
+<!-- БАННЕР -->
+<!-- 1 уровень -->
+<div class="banner">
+	<!-- 2 уровень -->
+	<div class="banner-align">
+		<!-- заголовок -->
+		<h1 class="banner-header">МАГАЗИН GEEK-ТОВАРОВ</h1>
+	</div>
+</div>
+
+<!-- ТОВАРЫ -->
+<!-- 1 уровень -->
+<div class="goods">
+	<!-- 2 уровень -->
+	<div class="goods-align">
+		<!-- 3 уровень -->
+		<!-- дивы для товаров -->
+		<div class="goods-items">
+			<img src="1.jpg" class="img-items">
+			<p class="text-red">Plants vs Zombie. Апокалипсис на лужайке</p>
+			<p class="text">390 руб.</p>
+			<button class="button">В корзину</button>
+		</div>
+		<!-- дивы для товаров -->
+		<div class="goods-items">
+			<img src="2.jpg" class="img-items">
+			<p class="text-red">Джокер. Постер-бук.</p>
+			<p class="text">850 руб.</p>
+			<button class="button">В корзину</button>
+		</div>
+		<!-- дивы для товаров -->
+		<div class="goods-items">
+			<img src="3.jpg" class="img-items">
+			<p class="text-red">Годзилла. Полувековая война.</p>
+			<p class="text">370 руб.</p>
+			<button class="button">В корзину</button>
+		</div>
+		<!-- дивы для товаров -->
+		<div class="goods-items">
+			<img src="4.jpg" class="img-items">
+			<p class="text-red">Изгой. Том 3.</p>
+			<p class="text">680 руб.</p>
+			<button class="button">В корзину</button>
+		</div>
+	</div>
+</div>
+
+<!-- ОТЗЫВЫ -->
+<!-- 1 уровень -->
+<div class="reviews">
+	<!-- 2 уровень -->
+	<div class="reviews-align">
+		<!-- 3 уровень -->
+		<!-- дивы для отзывов -->
+		<div class="reviews-block">
+			<img src="5.jpg" class="img-reviews">
+			<p class="text-red">Артем Бизяев, 23 лет</p>
+			<p class="text">С детства увлекаюсь комиксами, был рад найти новый магазин в нашем городе. Ассортимент и цены радуют!</p>
+		</div>
+		<!-- дивы для отзывов -->
+		<div class="reviews-block">
+			<img src="6.jpg" class="img-reviews">
+			<p class="text-red">Елена Маликова, 21 год</p>
+			<p class="text">Частый гость этого магазина, покупаю настольные игры, статуэтки, книги. Могу даже просто прийти, ради атмосферы магазина.</p>
+		</div>
+		<!-- дивы для отзывов -->
+		<div class="reviews-block">
+			<img src="7.jpg" class="img-reviews">
+			<p class="text-red">Владислав Романов, 31 год</p>
+			<p class="text">Являюсь автором нескольких комиксов. И рад, что магазин пошел на встречу и продает мои комиксы.</p>
+		</div>
+	</div>
+</div>
+
+<!-- ТОВАРЫ -->
+<!-- 1 уровень -->
+<div class="goods">
+	<!-- 2 уровень -->
+	<div class="goods-align">
+		<!-- 3 уровень -->
+		<!-- дивы для товаров -->
+		<div class="goods-items">
+			<img src="8.jpg" class="img-items">
+			<p class="text-red">Сумка</p>
+			<p class="text">1500 руб.</p>
+			<button class="button">В корзину</button>
+		</div>
+		<!-- дивы для товаров -->
+		<div class="goods-items">
+			<img src="9.jpg" class="img-items">
+			<p class="text-red">Футболка</p>
+			<p class="text">1000 руб.</p>
+			<button class="button">В корзину</button>
+		</div>
+		<!-- дивы для товаров -->
+		<div class="goods-items">
+			<img src="10.jpg" class="img-items">
+			<p class="text-red">Кукла</p>
+			<p class="text">2000 руб.</p>
+			<button class="button">В корзину</button>
+		</div>
+		<!-- дивы для товаров -->
+		<div class="goods-items">
+			<img src="11.jpg" class="img-items">
+			<p class="text-red">Чехлы</p>
+			<p class="text">500 руб.</p>
+			<button class="button">В корзину</button>
+		</div>
+	</div>
+</div>
